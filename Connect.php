@@ -4,7 +4,9 @@
  * @since: 04/05/2015 - 23:45
  */
 
-class Connect {
+require 'ConnectInterface.php';
+
+class Connect implements ConnectInterface{
 
     private $host;
     private $db;
