@@ -8,7 +8,7 @@ class Cliente {
 
     private $db;
 
-    public function __construct($conexao){
+    public function __construct(Connect $conexao){
         $this->db = $conexao->connect();
     }
 
