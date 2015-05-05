@@ -6,7 +6,9 @@
 require_once 'Connect.php';
 require_once 'Clientes.php';
 
-$cliente = new Cliente("localhost", "zf2-service-di", "postgres", "123456");
+$conexao = new Connect("localhost", "zf2-service-di", "postgres", "123456");
+$cliente = new Cliente($conexao);
+
 $listaClientes = $cliente->listar();
 
 require_once 'clientes.list.php';
